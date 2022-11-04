@@ -36,7 +36,9 @@ namespace AppointmentMaker.Models
         [DisplayName("Appointment Request Date")]
         public DateTime AppointmentDate { get; set; }
 
+        [Required]
         [DataType(DataType.Currency)]
+        [Range(90000, Double.MaxValue, ErrorMessage = "The field {0} must be greater than ${1}.")]
         [DisplayName("Patient's Approximate Net Worth")]
         public decimal PatientNetWorth { get; set; }
 
