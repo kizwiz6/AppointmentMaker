@@ -1,0 +1,6 @@
+﻿Modify the data entry form to include the following rules.
+1. Add some address fiels to the CustomerModel: Street, City, ZIP code, email and phone.
+2. Update (or recreate) the ShowAppointmentDetails view to include Street, City, ZIP code, emails and phone.
+3. Validate taht each of these items in the correct format.
+4. Add another rule: "Doctors refuse to see patients unless their net worth is more than $90,000".
+5. Add antoher rule: "Doctors refuse to see patients unless their pain level is above a 5".
