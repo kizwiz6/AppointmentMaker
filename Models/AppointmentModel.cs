@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace AppointmentMaker.Models
 {
     public class AppointmentModel
     {
+        [Required]
         [DisplayName("Patient's full name")]
         public string PatientName { get; set; }
 
@@ -14,7 +16,7 @@ namespace AppointmentMaker.Models
         public decimal PatientNetWorth { get; set; }
 
         [DisplayName("Primary Doctor's Last Name")]
-        public string DoctorName { get; set; }
+        public string? DoctorName { get; set; }
 
         [DisplayName("Patient's Perceived Level of Pain (1 low to 10 higH)")]
         public int PainLevel { get; set; }
