@@ -6,6 +6,14 @@ namespace AppointmentMaker.Controllers
     public class AppointmentController : Controller
     {
         /// <summary>
+        /// Need a list of things we're managing.
+        /// When the controller is launched it creates a new list.
+        /// List of AppointmentModel (type) called appointments.
+        /// Static so it sticks around between different calls, it doesn't change.
+        /// </summary>
+        static List<AppointmentModel> appointments = new List<AppointmentModel>();
+
+        /// <summary>
         /// Show a list (which will be Index).
         /// </summary>
         /// <returns></returns>
