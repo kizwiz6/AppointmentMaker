@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AppointmentMaker.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AppointmentMaker.Controllers
 {
@@ -20,6 +21,16 @@ namespace AppointmentMaker.Controllers
         public IActionResult Create()
         {
             return View();
+        }
+
+        /// <summary>
+        /// Shows the details of one item.
+        /// Sends a piece of data. I nthe parentheses we are expecting to receive an appointment model.
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult Details(AppointmentModel appointment)
+        {
+            return View("Details", appointment);
         }
     }
 }
