@@ -19,11 +19,12 @@ namespace AppointmentMaker.Controllers
         /// <returns></returns>
         public IActionResult Index()
         {
-            return View();
+            return View(appointments); // send a list of appointments.
         }
 
         /// <summary>
         /// Create a view for the create option. Creates a new appointment.
+        /// The Create menu currently shows the create form. It goes to the details item.
         /// </summary>
         /// <returns></returns>
         public IActionResult Create()
@@ -38,6 +39,7 @@ namespace AppointmentMaker.Controllers
         /// <returns></returns>
         public IActionResult Details(AppointmentModel appointment)
         {
+            appointments.Add(appointment); // add new appointment to appointment list.
             return View("Details", appointment);
         }
     }
